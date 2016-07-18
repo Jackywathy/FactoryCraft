@@ -1,0 +1,9 @@
+< en_US.lang - English localization file for the mod FactoryCraft >
+item.ExplosivePowder.name=Explosive Powder
+item.BetterIce.name=Better Ice
+tile.BetterIce.name=Better Ice
+item.EvenBetterIce.name=Even Better Ice
+tile.EvenBetterIce.name=Even Better Ice
+itemGroup.FactoryCraft Blocks=Factory Craft Blocks
+death.attack.electricity=%1$s was electrocute by an electric current. Oops.
+death.attack.electricity.player=%1$s was electrocuted while fighting %2$s. Oops.
