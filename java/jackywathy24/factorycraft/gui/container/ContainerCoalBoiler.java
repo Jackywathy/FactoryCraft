@@ -8,26 +8,26 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 public class ContainerCoalBoiler extends Container{
-	
+	// GUI CODE = 0!
 	private TileCoalBoiler TE;
 	@Override
 	public boolean canInteractWith(EntityPlayer playerIn) {
 		return TE.isUseableByPlayer(playerIn);
 	}
-	public ContainerCoalBoiler(IInventory playerInv, TileCoalBoiler TE){
-		this.TE = TE;
-		// two inventory slots
-		addSlotToContainer(new Slot(TE, 27, 62,17));
-		addSlotToContainer(new Slot(TE, 28, 62,17+36));
+	public ContainerCoalBoiler(IInventory playerInv, TileCoalBoiler tileCoalBoiler){
+		this.TE = tileCoalBoiler;
+		// two inventory slots 0-1
+		addSlotToContainer(new Slot(tileCoalBoiler, 0, 62,17));
+		addSlotToContainer(new Slot(tileCoalBoiler, 1, 62,17+36));
 		
 		// playerInv
 	    for (int y = 0; y < 3; ++y) {
-	        for (int x = 0; x < 9; ++x) {
-	            this.addSlotToContainer(new Slot(playerInv, x + y * 9 + 9, 8 + x * 18, 84 + y * 18));
+	        for (int x = 0; x < 9; ++x) {// start at index 2, 2-28
+	            this.addSlotToContainer(new Slot(playerInv, x + y * 9 + 2, 8 + x * 18, 84 + y * 18));
 	        }
 	    }
-	    for (int x = 0; x < 9; ++x) {
-	        this.addSlotToContainer(new Slot(playerInv, x, 8 + x * 18, 142));
+	    for (int x = 0; x < 9; ++x) { //29-
+	        this.addSlotToContainer(new Slot(playerInv, x+29, 8 + x * 18, 142));
 	    }
 	}
 	@Override

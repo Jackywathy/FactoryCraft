@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.IGuiHandler;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import jackywathy24.factorycraft.block.*;
 import jackywathy24.factorycraft.item.*;
@@ -25,6 +27,7 @@ public class CommonProxy {
 	public static final Block blockBetterIce = new BlockBetterIce();
 	public static final Block blockEvenBetterIce = new BlockEvenBetterIce();
 	public static final Block blockCoalBoiler = new BlockCoalBoiler();
+	//public static final Block blockSlabFurnace = new BlockSlabFurnace();
 	
 	
 	
@@ -44,6 +47,12 @@ public class CommonProxy {
 				BlockCoalBoiler.unlocalizedname,
 				blockCoalBoiler
 				);
+		/*
+		FactorycraftCore.registerBlock(
+				BlockSlabFurnace.unlocalizedname,
+				blockSlabFurnace
+				);
+	*/
 		TileCoalBoiler.register();
 		
 		
@@ -58,6 +67,7 @@ public class CommonProxy {
 		FactorycraftCore.registerTextureSimple(itemExplosivePowder);
 		FactorycraftCore.registerTextureSimple(blockBetterIce);
 		FactorycraftCore.registerTextureSimple(blockEvenBetterIce);
+		NetworkRegistry.INSTANCE.registerGuiHandler(FactorycraftCore.instance, new FactoryCraftGuiHandler());
 		
 	}
 	public void postInit(FMLPostInitializationEvent e){

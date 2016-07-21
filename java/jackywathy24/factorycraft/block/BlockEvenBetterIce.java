@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockEvenBetterIce extends BlockBetterIce{
 	
-	public static String unlocalizedname = "EvenBetterIce";
+	public static final String unlocalizedname = "EvenBetterIce";
 	
 	public BlockEvenBetterIce(){
 		super();

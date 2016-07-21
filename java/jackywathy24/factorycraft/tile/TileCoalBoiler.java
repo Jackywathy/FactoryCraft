@@ -1,6 +1,11 @@
 package jackywathy24.factorycraft.tile;
 
+import javax.annotation.Nullable;
+
+import jackywathy24.factorycraft.FactoryCraftGuiHandler;
+import jackywathy24.factorycraft.FactorycraftCore;
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
@@ -9,7 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.client.gui.inventory.GuiContainer;
 
@@ -17,9 +26,9 @@ public class TileCoalBoiler extends TileEntity implements IInventory{
 	public static final String unlocalizedname = "CoalBoiler_tile";
 	protected String customName;
 	public ItemStack[] inventory;
-	
 	public static void register(){
 		GameRegistry.registerTileEntity(TileCoalBoiler.class, unlocalizedname);
+
 	}
 	public TileCoalBoiler(){
 		this.inventory = new ItemStack[this.getSizeInventory()];
@@ -184,6 +193,9 @@ public class TileCoalBoiler extends TileEntity implements IInventory{
 	        this.setCustomName(nbt.getString("CustomName"));
 	    }
 	}
+
+		
+
 
 
 

@@ -13,10 +13,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -36,6 +38,10 @@ public class FactorycraftCore {
 	// CONSTANTS
 	public static final String MODID = "factorycraft";
 	public static final String NAME = "FactoryCraft";
+	@Instance(FactorycraftCore.MODID)
+	public static FactorycraftCore instance = new FactorycraftCore();
+	
+	
 	
 	public static final String blockFolder = "/factorycraft/textures/blocks/";
 	public static final String itemFolder = "/factorycraft/textures/items/";
@@ -106,6 +112,9 @@ public class FactorycraftCore {
 		GameRegistry.register((new ItemBlock(block)).setRegistryName(block.getRegistryName()));
 		System.out.println(block.getUnlocalizedName());
 		System.out.println(block.getRegistryName());
+	}
+	public static void register(String unlocalizedname, Block block, TileEntity te){
+		
 	}
 
 }
