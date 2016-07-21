@@ -28,6 +28,7 @@ public class ItemExplosivePowder extends Item{
 		if (!playerIn.capabilities.isCreativeMode){
 			--itemStackIn.stackSize;
 		}
+
 		return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
 		
 	}

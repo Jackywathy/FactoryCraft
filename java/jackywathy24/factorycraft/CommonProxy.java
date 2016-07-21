@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import jackywathy24.factorycraft.block.*;
 import jackywathy24.factorycraft.item.*;
+import jackywathy24.factorycraft.tile.*;
 import jackywathy24.factorycraft.ModRecipes;
 
 
@@ -23,7 +24,7 @@ public class CommonProxy {
 	// ALL blocks used!
 	public static final Block blockBetterIce = new BlockBetterIce();
 	public static final Block blockEvenBetterIce = new BlockEvenBetterIce();
-	
+	public static final Block blockCoalBoiler = new BlockCoalBoiler();
 	
 	
 	
@@ -39,6 +40,14 @@ public class CommonProxy {
 		FactorycraftCore.registerBlock(
 				BlockEvenBetterIce.unlocalizedname,
 				blockEvenBetterIce);
+		FactorycraftCore.registerBlock(
+				BlockCoalBoiler.unlocalizedname,
+				blockCoalBoiler
+				);
+		TileCoalBoiler.register();
+		
+		
+		
 		
 		
 		
