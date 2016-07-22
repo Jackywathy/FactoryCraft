@@ -43,17 +43,19 @@ public class CommonProxy {
 		FactorycraftCore.registerBlock(
 				BlockEvenBetterIce.unlocalizedname,
 				blockEvenBetterIce);
-		FactorycraftCore.registerBlock(
-				BlockCoalBoiler.unlocalizedname,
-				blockCoalBoiler
-				);
+
 		/*
 		FactorycraftCore.registerBlock(
 				BlockSlabFurnace.unlocalizedname,
 				blockSlabFurnace
 				);
 	*/
-		TileCoalBoiler.register();
+		System.out.println(TileCoalBoiler.unlocalizedname);
+		System.out.println(BlockCoalBoiler.unlocalizedname);
+		FactorycraftCore.registerTileEntity(
+				TileCoalBoiler.class, 
+				blockCoalBoiler,
+				BlockCoalBoiler.unlocalizedname);
 		
 		
 		

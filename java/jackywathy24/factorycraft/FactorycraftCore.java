@@ -3,7 +3,7 @@ package jackywathy24.factorycraft;
 
 import jackywathy24.factorycraft.block.*;
 import jackywathy24.factorycraft.item.*;
-
+import jackywathy24.factorycraft.tile.TileCoalBoiler;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
@@ -113,8 +113,9 @@ public class FactorycraftCore {
 		System.out.println(block.getUnlocalizedName());
 		System.out.println(block.getRegistryName());
 	}
-	public static void register(String unlocalizedname, Block block, TileEntity te){
-		
+	public static void registerTileEntity(Class clazz, Block block, String unloclizedname){
+		GameRegistry.registerTileEntity(TileCoalBoiler.class, unloclizedname);
+		registerBlock(unloclizedname, block);
 	}
 
 }

@@ -23,13 +23,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.client.gui.inventory.GuiContainer;
 
 public class TileCoalBoiler extends TileEntity implements IInventory{
-	public static final String unlocalizedname = "CoalBoiler_tile";
+	public static final String unlocalizedname = "CoalBoiler";
 	protected String customName;
 	public ItemStack[] inventory;
-	public static void register(){
-		GameRegistry.registerTileEntity(TileCoalBoiler.class, unlocalizedname);
 
-	}
 	public TileCoalBoiler(){
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	}

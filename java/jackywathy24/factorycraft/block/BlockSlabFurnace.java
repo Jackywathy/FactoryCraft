@@ -13,7 +13,7 @@ import net.minecraft.util.IStringSerializable;
 public class BlockSlabFurnace extends BlockSlab {
 	// BASED OF TINKER"s CONSTRUCT"s furnace slab, but stackable!
 	public static final String unlocalizedname = "SlabFurnace";
-	public static final PropertyEnum<BlockSlabFurnace.Variant> VARIANT = PropertyEnum.<BlockSlabFurnace.Variant>create("variant", BlockSlabFurnace.Variant.class);
+	public static final PropertyEnum<BlockSlabFurnace.EnumBlockHalf> HALF = PropertyEnum.<BlockSlabFurnace.EnumBlockHalf>create("half", BlockSlabFurnace.EnumBlockHalf.class);
 	public int meta;
 	
 	public BlockSlabFurnace() {
@@ -84,6 +84,25 @@ public class BlockSlabFurnace extends BlockSlab {
         public boolean isDouble()
         {
             return false;
+        }
+    }
+    
+    public static enum EnumBlockHalf implements IStringSerializable{
+        TOP("top"),
+        BOTTOM("bottom");
+
+        private final String name;
+
+        private EnumBlockHalf(String name){
+            this.name = name;
+        }
+
+        public String toString(){
+            return this.name;
+        }
+
+        public String getName(){
+            return this.name;
         }
     }
 
