@@ -23,11 +23,17 @@ public class CommonProxy {
 	// All items used!
 	public static final Item itemExplosivePowder = new ItemExplosivePowder("ExplosivePowder");
 	
+	// ItemSlabs
+	public static final ItemSlab item
+	
+	
 	// ALL blocks used!
 	public static final Block blockBetterIce = new BlockBetterIce();
 	public static final Block blockEvenBetterIce = new BlockEvenBetterIce();
 	public static final Block blockCoalBoiler = new BlockCoalBoiler();
-	//public static final Block blockSlabFurnace = new BlockSlabFurnace();
+	public static final Block blockSlabFurnaceDouble = new BlockSlabFurnace.Double();
+	public static final Block blockSlabFurnaceHalf = new BlockSlabFurnace.Half();
+
 	
 	
 	
